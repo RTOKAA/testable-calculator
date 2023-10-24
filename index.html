@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>get post</title>
+    </head>
+    <body>
+        <script>
+            const url = "/post_data";
+            // JSON.stringify({id : "123", name:"kawahara"})
+const params = {method : "POST",  headers: {
+    'Content-Type': 'application/json' // 送信データの形式に応じて適切なContent-Typeを設定
+  }, body : JSON.stringify({id : "123", name:"kawahara"})}; 
+fetch(url, params).then(res => res.json()).then(data => {console.log(data); });
+
+        </script>
+    </body>
+</html>
